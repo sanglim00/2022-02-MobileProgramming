@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Assignment</string>
-    <string name="login">LOGIN</string>
-    <string name="join">JOIN</string>
+    <string name="login">로그인</string>
+    <string name="join">회원가입</string>
+    <string name="enter_your_id">아이디를 입력해주세요.</string>
+    <string name="enter_your_password">비밀번호를 입력해주세요.</string>
+    <string name="re_enter_your_password">비밀번호를 한 번 더입력해주세요.</string>
+    <string name="back">돌아가기</string>
+    <string name="checkID">ID 확인</string>
+    <string name="joinMsg">회원가입</string>
 </resources>
