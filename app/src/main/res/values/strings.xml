@@ -8,4 +8,8 @@
     <string name="back">돌아가기</string>
     <string name="checkID">ID 확인</string>
     <string name="joinMsg">회원가입</string>
+    <string name="agreeMsg">동의합니다</string>
+    <string name="disagreeMsg">동의하지 않습니다</string>
+    <string name="privacyPolicy">개인정보처리방침</string>
+    <string name="productMsg">상품</string>
 </resources>

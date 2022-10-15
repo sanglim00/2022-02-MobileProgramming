@@ -1,88 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/joinMsg"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/joinMsg"
-        android:textAlignment="center"
-        android:textSize="20sp" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/joinID"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autofillHints=""
-            android:ems="12"
-            android:hint="@string/enter_your_id"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="#757575" />
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="@string/checkID"
-            android:textColor="@color/black"
-            app:strokeColor="@color/ad5cff"
-            app:strokeWidth="2dp" />
+            <TextView
+                android:id="@+id/joinMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="@string/joinMsg"
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/joinPW"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:hint="@string/enter_your_password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:textColorHint="#757575" />
+                <EditText
+                    android:id="@+id/joinID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:ems="12"
+                    android:hint="@string/enter_your_id"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textColorHint="#757575" />
 
-    <EditText
-        android:id="@+id/reJoinPW"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:hint="@string/re_enter_your_password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:textColorHint="#757575" />
+                <Button
+                    android:id="@+id/checkIDBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="90dp"
+                    android:text="@string/checkID"
+                    android:textColor="@color/black"
+                    app:strokeColor="@color/ad5cff"
+                    app:strokeWidth="2dp" />
 
-    <Button
-        android:id="@+id/joinFinishBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/ad5cff"
-        android:textColor="@color/white"
-        android:text="가입하기" />
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/backBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
-        app:strokeColor="@color/ad5cff"
-        app:strokeWidth="2dp"
-        android:text="@string/back" />
+            <TextView
+                android:id="@+id/idCheckMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/reJoinPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="@string/re_enter_your_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/joinPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="@string/enter_your_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/joinName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="이름을 입력해주세요."
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/joinPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="전화번호를 입력해주세요."
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/joinAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="주소를 입력해주세요."
+                android:inputType="textPostalAddress" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/privacyPolicy" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioAgree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreeMsg" />
+
+                <RadioButton
+                    android:id="@+id/radioDisagree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disagreeMsg" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/joinFinishBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/ad5cff"
+                android:text="가입하기"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/back"
+                android:textColor="@color/black"
+                app:strokeColor="@color/ad5cff"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
