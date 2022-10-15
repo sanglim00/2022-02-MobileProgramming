@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="login">LOGIN</string>
+    <string name="join">JOIN</string>
+</resources>
