@@ -22,8 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JoinActivity" android:label="Join Activity"/>
-        <activity android:name=".ProductActivity" android:label="Product Activity"/>
+        <activity android:name=".JoinActivity" android:label="Join"/>
+        <activity android:name=".ProductActivity" android:label="Product"/>
     </application>
 
 </manifest>

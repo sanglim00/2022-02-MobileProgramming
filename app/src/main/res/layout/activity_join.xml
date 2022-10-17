@@ -27,10 +27,16 @@
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/textID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="아이디" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -66,16 +72,11 @@
                 android:layout_marginBottom="20dp"
                 android:visibility="gone" />
 
-            <EditText
-                android:id="@+id/reJoinPW"
+            <TextView
+                android:id="@+id/textPW"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:ems="10"
-                android:hint="@string/re_enter_your_password"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:textColorHint="#757575" />
+                android:text="비밀번호" />
 
             <EditText
                 android:id="@+id/joinPW"
@@ -88,6 +89,29 @@
                 android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
+            <TextView
+                android:id="@+id/textPW2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 확인" />
+
+            <EditText
+                android:id="@+id/JoinPW2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="@string/re_enter_your_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이름" />
+
             <EditText
                 android:id="@+id/joinName"
                 android:layout_width="match_parent"
@@ -97,6 +121,12 @@
                 android:hint="이름을 입력해주세요."
                 android:inputType="textPersonName" />
 
+            <TextView
+                android:id="@+id/textPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전화번호" />
+
             <EditText
                 android:id="@+id/joinPhone"
                 android:layout_width="match_parent"
@@ -105,6 +135,12 @@
                 android:ems="10"
                 android:hint="전화번호를 입력해주세요."
                 android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="주소" />
 
             <EditText
                 android:id="@+id/joinAddress"

@@ -28,12 +28,14 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:minHeight="100dp">
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/appleImg"
                     android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/apple"
                     android:scaleType="centerCrop"
                     tools:srcCompat="@drawable/apple" />
 
@@ -41,18 +43,20 @@
                     android:id="@+id/appleTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="사과" />
+                    android:text="@string/apple" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:minHeight="100dp">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/fineappleImg"
                     android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/fineapple"
                     android:scaleType="centerCrop"
                     tools:srcCompat="@drawable/fineapple" />
 
@@ -60,35 +64,39 @@
                     android:id="@+id/fineappleTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="파인애플" />
+                    android:text="@string/fineapple" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:minHeight="100dp">
 
                 <ImageView
-                    android:id="@+id/pomegranateTxt"
+                    android:id="@+id/pomegranateImg"
                     android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/pomegranate"
                     android:scaleType="centerCrop"
                     tools:srcCompat="@drawable/pomegranate" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/pomegranateTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="석류" />
+                    android:text="@string/pomegranate" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:minHeight="100dp">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/peachImg"
                     android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/peach"
                     android:scaleType="centerCrop"
                     tools:srcCompat="@drawable/peach" />
 
@@ -96,17 +104,19 @@
                     android:id="@+id/peachTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="복숭아" />
+                    android:text="@string/peach" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:minHeight="100dp">
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/strawberryImg"
                     android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/strawberry"
                     android:scaleType="centerCrop"
                     tools:srcCompat="@drawable/strawberry" />
 
@@ -114,7 +124,7 @@
                     android:id="@+id/strawberryTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="딸기" />
+                    android:text="@string/strawberry" />
             </TableRow>
 
         </TableLayout>
