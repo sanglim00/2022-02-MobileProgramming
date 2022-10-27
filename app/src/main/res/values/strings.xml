@@ -12,9 +12,4 @@
     <string name="disagreeMsg">동의하지 않습니다</string>
     <string name="privacyPolicy">개인정보처리방침</string>
     <string name="productMsg">상품</string>
-    <string name="apple">사과</string>
-    <string name="fineapple">파인애플</string>
-    <string name="pomegranate">석류</string>
-    <string name="peach">복숭아</string>
-    <string name="strawberry">딸기</string>
 </resources>

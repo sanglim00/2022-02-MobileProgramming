@@ -9,18 +9,9 @@
     android:layout_marginTop="20dp"
     android:layout_marginRight="20dp">
 
-    <TextView
-        android:id="@+id/productMsg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/productMsg"
-        android:textAlignment="center"
-        android:textSize="20sp" />
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -29,102 +20,226 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="100dp">
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/appleImg"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/apple"
-                    android:scaleType="centerCrop"
-                    tools:srcCompat="@drawable/apple" />
+                    android:id="@+id/book1"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/book1" />
 
-                <TextView
-                    android:id="@+id/appleTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/apple" />
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/book1TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="가녀장의 시대"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="13,500 원"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="매일 한 편씩 이메일로 독자들에게 글을 보내는 〈일간 이슬아〉로 그 어떤 등단 절차나 시스템의 승인 없이도 독자와 직거래를 트며 우리 시대의 대표 에세이스트로 자리잡은 작가 이슬아, 그가 첫 장편소설을 발표했다. 제목은 ‘가녀장의 시대’. 〈일간 이슬아〉에서 이 소설이 연재되는 동안 이슬아 작가가 만든 ‘가녀장’이란 말은 SNS와 신문칼럼에 회자되며 화제를 불러일으켰다.  이 소설은 가부장도 가모장도 아닌 가녀장이 주인공인 이야기이다. 할아버지가 통치하는 집안에서 태어난 여자아이가 무럭무럭 자라 가정을 통치한다. 개천에서 용 나기도 어렵고 자수성가도 어려운 이 시대에 용케 글쓰기로 가세를 일으킨 딸이 집안의 경제권과 주권을 잡는다. 가부장의 집안에서는 결코 일어나지 않을 법한 아름답고 통쾌한 혁명이 이어지는가 하면, 가부장이 저질렀던 실수를 가녀장 또한 답습하기도 한다. 가녀장이 집안의 세력을 잡으면서 가족구성원1이 된 원래의 가부장은 스스로 권위를 내려놓음으로써 아름답고 재미있는 중년 남성으로 존재감을 과시한다. 이 가부장은 한 팔에는 대걸레를, 다른 한 팔에는 청소기를 문신으로 새기고, 집안 곳곳을 열심히 청소하면서 가녀장 딸과 아내를 보필한다.  그럼에도 불구하고 이 소설은 가부장제를 혁파하자는 식의 선동이나 가부장제 풍자로만 가득한 이야기는 아니다. 가녀장은 끊임없이 반성하고, 자신을 키우고 생존하게 한 역대 가부장들과 그 치하에서 살았던 어머니, 그리고 글이 아니라 몸을 쓰며 살아가는 사람들의 노동에 대해 생각한다. 슬아는 그 어느 가부장보다도 합리적이고 훌륭한 가녀장이 되고 싶어하지만, 슬아의 어머니 복희에게도 가녀장의 시대가 가부장의 시대보다 더 나을까? 슬아의 가녀장 혁명은 과연 모두를 행복하게 만들 수 있을까? 가세를 일으키려 주먹을 불끈 쥔 딸이 자신과 가족과 세계의 운명을 바꾸기 위해 분투하는 이슬아의 소설은 젊은 여성들이 각계각층에서 활약하며 과거에는 상상도 못한 혁신과 서사를 만들어내는 요즘의 시대상을 반영한다. 소설 속에서 이슬아는 당당하게 선언한다.  “그들의 집에는 가부장도 없고 가모장도 없다. 바야흐로 가녀장의 시대가 시작되었다.”" />
+                </LinearLayout>
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="100dp">
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/fineappleImg"
-                    android:layout_width="120dp"
+                    android:id="@+id/book2"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/book2" />
+                <LinearLayout
+                    android:layout_width="260dp"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/fineapple"
-                    android:scaleType="centerCrop"
-                    tools:srcCompat="@drawable/fineapple" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/fineappleTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fineapple" />
+                    <TextView
+                        android:id="@+id/book2TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="이토록 평범한 미래"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="12,600 원"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="작가 김연수가 짧지 않은 침묵을 깨고 신작 소설집 『이토록 평범한 미래』를 출간한다. 『사월의 미, 칠월의 솔』(2013) 이후 9년 만에 펴내는 여섯번째 소설집이다. 그전까지 2~4년 간격으로 꾸준히 소설집을 펴내며 ‘다작 작가’로 알려져온 그에게 지난 9년은 “바뀌어야 한다는 내적인 욕구”가 강하게 작동하는 동시에 “외적으로도 바뀔 수밖에 없는 일들이 벌어진”(특별 소책자 『어텐션 북』 수록 인터뷰에서) 시간이었다. 안팎으로 변화를 추동하는 일들이 계속되는 상황에서 김연수는 소설 외의 다른 글쓰기에 몰두하며 그 시간을 신중하게 지나왔다. 변화에 대한 내적인 욕구와 외적인 요구는 작가를 어떤 자리로 옮겨오게 했을까. 『이토록 평범한 미래』는 작가가 최근 2~3년간 집중적으로 단편 작업에 매진한 끝에 선보이는 소설집으로, ‘시간’을 인식하는 김연수의 변화된 시각을 확인할 수 있게 한다. 김연수는 과거에서 미래를 향해 흐르는 것으로만 여겨지는 시간을 다르게 정의함으로써 우리가 현재의 시간을, 즉 삶을 새롭게 상상할 수 있는 가능성을 아름답고 서정적인 언어로 설득해낸다. 특별한 점은 그 가능성이 ‘이야기’의 형태로 전달된다는 것이다." />
+                </LinearLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="100dp">
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/pomegranateImg"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/pomegranate"
-                    android:scaleType="centerCrop"
-                    tools:srcCompat="@drawable/pomegranate" />
+                    android:id="@+id/book3"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/book3" />
 
-                <TextView
-                    android:id="@+id/pomegranateTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pomegranate" />
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/book3TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="작은 땅의 야수들"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView63"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="16,200 원"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="『작은 땅의 야수들』은 지난 수십 년간 이어져 왔던 대한민국의 독립 투쟁과 그 격동의 세월 속에 휘말려 살아갔던 사람들의 이야기다. 다양한 등장인물을 통해 인류를 하나로 묶어줄 사랑과 공감, 연민 등의 가치를 일깨운다. 김주혜 작가는 “단지 지금으로부터 백 년쯤 전, 여기서 멀리 떨어진 작은 땅에서 살았던 한국인들에 관한 이야기일 뿐 아니라, 전반적으로 인류 전체의 인간성에 관한 이야기라고 생각하며 썼다”고 말한 바 있다. 김구 선생을 도와 독립운동에 관여했던 외할아버지의 이야기를 어린 시절부터 듣고 자란 재미 작가의 첫 장편 데뷔작이 일제강점기 한국을 배경으로 하는 것은 어쩌면 필연적인 일이었을 것이다. 폭넓은 서사와 호흡을 보여준다는 점에서 톨스토이의 작품을 연상케 하고, 일제강점기에 한국인이 겪었던 뒤틀린 운명을 그려낸다는 점에서 동시대를 배경으로 하는 『파친코』도 떠오른다. 대하소설을 좋아하는 독자, 절절한 사랑 이야기를 좋아하는 독자는 물론, 성별과 세대를 아울러 널리 읽힐 대작이다. 「기생충」을 시작으로 「파친코」까지 K-콘텐츠가 전 세계의 사랑을 받는 가운데 영어로 먼저 쓰인 ‘우리 이야기’를 본국에서 모국어로 출간한다는 점에서 의미가 깊다. 특별히 한국어판에는 작가가 한국 독자들에게 전하는 말을 실어 그 의미를 새기고, 모국어의 아름다움을 살리기 위해 번역에 세심한 공을 들였다. 1917년 겨울 평안도 깊은 산속. 극한의 추위 속에서 굶주림과 싸우며 짐승을 쫓던 사냥꾼이 호랑이의 공격으로부터 일본인 장교를 구하게 되는데, 이 만남으로 그들의 삶은 운명처럼 연결되고 반세기에 걸친 이야기가 펼쳐진다. 사냥꾼, 군인, 기생, 깡패, 학생, 사업가, 혁명가…… 파란만장한 인생들이 ‘인연’이라는 끈으로 질기게 얽혀 만나고 헤어지고 재회하며 한반도의 역사를 아름답게 수놓는다."/>
+
+                </LinearLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="100dp">
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/peachImg"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/peach"
-                    android:scaleType="centerCrop"
-                    tools:srcCompat="@drawable/peach" />
+                    android:id="@+id/book4"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/book4" />
 
-                <TextView
-                    android:id="@+id/peachTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/peach" />
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/book4TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="대도시의 사랑법"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/textView64"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="12,600 원"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="2022년 3월, 세계적인 권위의 문학상 인터내셔널 부커상(The International Booker Prize) 후보에 오른 박상영 연작소설 『대도시의 사랑법』을 영국판 표지로 새롭게 만난다. 교보문고 리커버:K 출간을 기념하여 수록한 신작 산문 「낯선 세계로 떠나는 티켓」은 이 책에 실린 각 작품에 대한 저자 코멘터리와 『대도시의 사랑법』을 출간한 이후 작가에게 벌어진 놀라운 일들에 대한 뜻깊은 감회를 새롭게 담았다. 30대 초반의 작가 ‘영’이 좌충우돌하며 삶과 사랑을 배워나가는 과정을 놀랍도록 흥미롭고 깊이 있게 담아낸 『대도시의 사랑법』은 지난해 11월 미국 출간 이후 뉴욕타임스, 퍼블리셔스 위클리, 커커스리뷰, 오프라 매거진 등 언론과 평단의 호평을 받으며 영미권 독자들의 큰 주목을 받았다. 부커상 후보작을 소개하는 부커 라이브러리는 이 작품을 “반짝이는 서울을 그려낸, 에너지 넘치며 유쾌하고 감동적인 소설”이라고 평하기도 했다. 영국에서 출간한 Love in the Big City(안톤 허 옮김, Tilted Axis Press 2021)가 인터내셔널 부커상 후보에 오르며 자연히 영국판 표지 또한 국내에 널리 알려졌다. 한 팟캐스트 방송에서 작가가 ‘최애’ 표지로 꼽기도 한 이 이미지는 『대도시의 사랑법』 첫번째 수록작인 「재희」의 주요 소재를 활용했다. ‘나’의 냉동 블루베리가 ‘재희’의 말보로 레드를 감싸안은 모양새로 아름답게 구현한 표지 이미지는 리커버 특별판으로 이 작품을 다시 만나게 될 독자들에게도 애틋하게 가닿을 것이다." />
+
+                </LinearLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="100dp">
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/strawberryImg"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/strawberry"
-                    android:scaleType="centerCrop"
-                    tools:srcCompat="@drawable/strawberry" />
+                    android:id="@+id/book5"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/book5" />
 
-                <TextView
-                    android:id="@+id/strawberryTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/strawberry" />
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/book5TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="눈감지 마라"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="13,500 원"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="『웬만해선 아무렇지 않다』 『세 살 버릇 여름까지 간다』 등을 통해 짧은 이야기의 미학을 보여주었던 이기호 작가의 새 연작 짧은 소설집 『눈감지 마라』가 출간되었다. “2000년대 문학이 선사한 가장 ‘개념 있는’ 유쾌함”(문학평론가 신형철)이라는 평을 받은 ‘이야기꾼’답게 찰나를 포착하는 절묘한 시선과 유머 감각은 여전하지만, 소설의 내용은 한결 묵직해졌다.  총 49편의 연작 짧은 소설에서, 작가는 ‘지방 청년들’에게 초점을 맞춘다. 대학을 갓 졸업했지만 학자금대출이라는 빚더미에 앉은 ‘박정용’과 ‘전진만’ 두 청년의 삶을 따라가며 편의점, 택배 상하차, 고속도로휴게소 등 각종 아르바이트 현장에서 노동하는 모습을 그려낸다. 코로나19의 나날 속, “고용주들도 힘들긴 마찬가지였지만, 아르바이트생들의 고통은 더 분절된 형태로 오는 것 같았다. 고통도 시급으로 왔다”(214쪽)라고 이야기하는 소설의 문장들은 절절이 공감을 불러일으킨다. 사회적 재난은 평등하지 않고 항상 청년과 취약계층에게 더욱 위협적이기 때문이다.  이기호 특유의 위트가 소설 곳곳에 포진되어 있지만, 마냥 웃음 짓기는 어렵다. 청년들의 고단한 삶은 곧 ‘눈감고 싶은’ 현실에 가깝고, 계속해서 쌓여가는 두 인물의 사소한 어긋남은 조마조마한 마음으로 소설을 읽어 내려가게 만든다. 그리하여 후반부에 나타나는 비극 앞에서 자못 숙연해지게 된다." />
+                </LinearLayout>
             </TableRow>
 
         </TableLayout>
