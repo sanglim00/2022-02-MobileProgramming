@@ -96,7 +96,7 @@
                 android:text="비밀번호 확인" />
 
             <EditText
-                android:id="@+id/JoinPW2"
+                android:id="@+id/reJoinPW"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -157,6 +157,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="@string/privacyPolicy" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 1. 개인정보의 처리목적 및 수집항목 \n 2. 개인정보의 제3자 제공 \n3. 개인정보 처리의 위탁 \n4. 개인정보의 처리 및 보유기간 \n5. 개인정보 파기절차 및 방법 \n6. 정보주체의 권리·의무 및 그 행사방법 7\n. 개인정보의 안전성 확보조치 \n8. 개인정보 자동 수집 장치의 설치ㆍ 운영 및 거부에 관한 사항 \n9. 개인정보보호 책임자 및 연락처 \n10. 기타 \n11. 개인정보처리방침의 변경" />
 
             <RadioGroup
                 android:layout_width="match_parent"
