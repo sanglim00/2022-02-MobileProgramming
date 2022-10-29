@@ -28,11 +28,12 @@ public class ProductActivity extends AppCompatActivity {
         if (loginCheck) {
             SharedPreferences sharedPreferences= getSharedPreferences("user_info", 0);
             String id = sharedPreferences.getString("userID","");
-            String name = sharedPreferences.getString("joinName", "");
-            String phone = sharedPreferences.getString("joinPhone", "");
-            String address = sharedPreferences.getString("joinAddress", "");
+            String name = sharedPreferences.getString("userName", "");
+            String phone = sharedPreferences.getString("userPhone", "");
+            String address = sharedPreferences.getString("userAddress", "");
+            String agree = sharedPreferences.getString("ppAgree", "");
 
-            builder.setTitle("내 정보").setMessage("아이디: " + id + "\n이름: " + name +"\n전화번호: " + phone + "\n주소: " + address);
+            builder.setTitle("내 정보").setMessage("아이디: " + id + "\n이름: " + name +"\n전화번호: " + phone + "\n주소: " + address + "\n개인정보처리방침: "+agree);
             builder.setNegativeButton("닫기", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which){

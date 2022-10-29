@@ -130,6 +130,7 @@ public class JoinActivity extends AppCompatActivity {
                     String userName = joinName.getText().toString();
                     String userPhone = joinPhone.getText().toString();
                     String userAddress = joinAddress.getText().toString();
+                    String ppAgree = checkedRadio.getText().toString();
 
                     editor.putString("userID", userID);
                     editor.putString("userPW", userPW);
@@ -137,6 +138,7 @@ public class JoinActivity extends AppCompatActivity {
                     editor.putString("userName", userName);
                     editor.putString("userPhone", userPhone);
                     editor.putString("userAddress", userAddress);
+                    editor.putString("ppAgree", ppAgree);
 
                     editor.commit();
 
