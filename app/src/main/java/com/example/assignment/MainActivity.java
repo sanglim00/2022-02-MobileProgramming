@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
+                intent.putExtra("LoginCheck", LoginCheck.booleanValue());
                 startActivity(intent);
             }
         });
@@ -46,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(userID.getText().toString().isEmpty() || userPW.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 제대로 입력해주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 // 입력값과 저장된 값이 같을경우
                 if(userID.getText().toString().equals(id) && userPW.getText().toString().equals(pw)) {
                     LoginCheck = true;
