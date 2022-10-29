@@ -16,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="463dp"
-        android:text="상품 바로 보러가기" />
+        android:text="@string/showProduct" />
 
     <TableLayout
         android:id="@+id/NonMemberTable"
@@ -92,6 +92,17 @@
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/UserState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="240dp"
+        android:text="@string/nonMemberState" />
 
 
 </RelativeLayout>

@@ -24,4 +24,6 @@
     <string name="passwordCheck">비밀번호 확인</string>
     <string name="password">비밀번호</string>
     <string name="show_my_info">내 정보보기</string>
+    <string name="nonMemberState">비회원 상태입니다.</string>
+    <string name="showProduct">상품 바로 보러가기</string>
 </resources>

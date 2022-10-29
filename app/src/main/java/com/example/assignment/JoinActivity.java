@@ -78,6 +78,23 @@ public class JoinActivity extends AppCompatActivity {
                 joinPhone = (EditText) findViewById(R.id.joinPhone);
                 joinAddress = (EditText) findViewById(R.id.joinAddress);
 
+                // 모든 항목이 입력되었는지 체크
+                if(joinID.getText().toString().isEmpty() ||
+                        joinPW.getText().toString().isEmpty()||
+                        rejoinPW.getText().toString().isEmpty()||
+                        joinName.getText().toString().isEmpty()||
+                        joinPhone.getText().toString().isEmpty()||
+                        joinAddress.getText().toString().isEmpty()
+                ) {
+                    Toast.makeText(getApplicationContext(), "입력되지 않은 항목이 있습니다.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(!checkID) {
+                    Toast.makeText(getApplicationContext(), "아이디를 확인해주세요.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 // 비밀번호 검사 - 숫자, 특수문자가 포함하기
                 String symbol = "([0-9].*[!,@,#,^,&,*,(,)])|([!,@,#,^,&,*,(,)].*[0-9])";
                 // 비밀번호 검사 - 영문자 대소문자 적어도 하나씩 포함하기
@@ -116,39 +133,36 @@ public class JoinActivity extends AppCompatActivity {
                 else if( checkedRadio.getText().toString().equals("동의합니다")) checkAgree = true;
                 else {
                     checkAgree = false;
+                    Toast.makeText(getApplicationContext(), "개인정보 이용약관에 동의하셔야 회원가입이 가능합니다", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 // 회원가입
-                if(checkPW && checkID && checkAgree) {
-                    SharedPreferences prefs = getSharedPreferences("user_info", 0);
-                    SharedPreferences.Editor editor = prefs.edit();
 
-                    String userID = joinID.getText().toString();
-                    String userPW = joinPW.getText().toString();
-                    String reUserPW = rejoinPW.getText().toString();
-                    String userName = joinName.getText().toString();
-                    String userPhone = joinPhone.getText().toString();
-                    String userAddress = joinAddress.getText().toString();
-                    String ppAgree = checkedRadio.getText().toString();
+                SharedPreferences prefs = getSharedPreferences("user_info", 0);
+                SharedPreferences.Editor editor = prefs.edit();
 
-                    editor.putString("userID", userID);
-                    editor.putString("userPW", userPW);
-                    editor.putString("reUserPW", reUserPW);
-                    editor.putString("userName", userName);
-                    editor.putString("userPhone", userPhone);
-                    editor.putString("userAddress", userAddress);
-                    editor.putString("ppAgree", ppAgree);
+                String userID = joinID.getText().toString();
+                String userPW = joinPW.getText().toString();
+                String reUserPW = rejoinPW.getText().toString();
+                String userName = joinName.getText().toString();
+                String userPhone = joinPhone.getText().toString();
+                String userAddress = joinAddress.getText().toString();
+                String ppAgree = checkedRadio.getText().toString();
 
-                    editor.commit();
+                editor.putString("userID", userID);
+                editor.putString("userPW", userPW);
+                editor.putString("reUserPW", reUserPW);
+                editor.putString("userName", userName);
+                editor.putString("userPhone", userPhone);
+                editor.putString("userAddress", userAddress);
+                editor.putString("ppAgree", ppAgree);
 
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                }
-                // 입력이 제대로 되어있지 않았을 때
-                else {
-                    Toast.makeText(getApplicationContext(), "입력을 다시 확인하세요", Toast.LENGTH_SHORT).show();
-                }
+                editor.commit();
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
             }
         });
 

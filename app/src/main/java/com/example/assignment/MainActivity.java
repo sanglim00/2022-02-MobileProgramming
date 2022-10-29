@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -16,12 +17,16 @@ public class MainActivity extends AppCompatActivity {
     Button ProductBtn, loginBtn, JoinBtn;
     EditText userID, userPW;
 
+    TextView UserState ;
+
     Boolean LoginCheck = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        UserState = (TextView) findViewById(R.id.UserState);
 
         ProductBtn = (Button) findViewById(R.id.productBtn);
         ProductBtn.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 // 입력값과 저장된 값이 같을경우
                 if(userID.getText().toString().equals(id) && userPW.getText().toString().equals(pw)) {
                     LoginCheck = true;
+                    UserState.setText("회원 상태입니다.");
                     Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
                     // 상품페이지에서 내 정보 확인 시 체크하기 위한 변수전달
                     intent.putExtra("LoginCheck", LoginCheck.booleanValue());
