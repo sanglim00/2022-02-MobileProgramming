@@ -31,7 +31,7 @@
                 android:id="@+id/textID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="아이디" />
+                android:text="@string/id" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                 android:id="@+id/textPW"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="비밀번호" />
+                android:text="@string/password" />
 
             <EditText
                 android:id="@+id/joinPW"
@@ -93,7 +93,7 @@
                 android:id="@+id/textPW2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="비밀번호 확인" />
+                android:text="@string/passwordCheck" />
 
             <EditText
                 android:id="@+id/reJoinPW"
@@ -110,7 +110,7 @@
                 android:id="@+id/textName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="이름" />
+                android:text="@string/name" />
 
             <EditText
                 android:id="@+id/joinName"
@@ -118,14 +118,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:ems="10"
-                android:hint="이름을 입력해주세요."
+                android:hint="@string/enter_your_name"
                 android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="전화번호" />
+                android:text="@string/phoneNum" />
 
             <EditText
                 android:id="@+id/joinPhone"
@@ -133,14 +133,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:ems="10"
-                android:hint="전화번호를 입력해주세요."
+                android:hint="@string/enter_your_phone"
                 android:inputType="phone" />
 
             <TextView
                 android:id="@+id/textAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="주소" />
+                android:text="@string/address" />
 
             <EditText
                 android:id="@+id/joinAddress"
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:ems="10"
-                android:hint="주소를 입력해주세요."
+                android:hint="@string/enter_your_address"
                 android:inputType="textPostalAddress" />
 
             <TextView
@@ -162,9 +162,10 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1. 개인정보의 처리목적 및 수집항목 \n2. 개인정보의 제3자 제공 \n3. 개인정보 처리의 위탁 \n4. 개인정보의 처리 및 보유기간 \n5. 개인정보 파기절차 및 방법 \n6. 정보주체의 권리·의무 및 그 행사방법 \n7. 개인정보의 안전성 확보조치 \n8. 개인정보 자동 수집 장치의 설치ㆍ 운영 및 거부에 관한 사항 \n9. 개인정보보호 책임자 및 연락처 \n10. 기타 \n11. 개인정보처리방침의 변경" />
+                android:text="@string/privacyPolicyContent" />
 
             <RadioGroup
+                android:id="@+id/ppRadio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -186,7 +187,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/ad5cff"
-                android:text="가입하기"
+                android:text="@string/joinBtn"
                 android:textColor="@color/white" />
 
             <Button

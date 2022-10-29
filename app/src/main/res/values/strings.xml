@@ -12,4 +12,15 @@
     <string name="disagreeMsg">동의하지 않습니다</string>
     <string name="privacyPolicy">개인정보처리방침</string>
     <string name="productMsg">상품</string>
+    <string name="id">아이디</string>
+    <string name="address">주소</string>
+    <string name="privacyPolicyContent">1. 개인정보의 처리목적 및 수집항목 \n2. 개인정보의 제3자 제공 \n3. 개인정보 처리의 위탁 \n4. 개인정보의 처리 및 보유기간 \n5. 개인정보 파기절차 및 방법 \n6. 정보주체의 권리·의무 및 그 행사방법 \n7. 개인정보의 안전성 확보조치 \n8. 개인정보 자동 수집 장치의 설치ㆍ 운영 및 거부에 관한 사항 \n9. 개인정보보호 책임자 및 연락처 \n10. 기타 \n11. 개인정보처리방침의 변경</string>
+    <string name="joinBtn">가입하기</string>
+    <string name="enter_your_phone">전화번호를 입력해주세요.</string>
+    <string name="enter_your_name">이름을 입력해주세요.</string>
+    <string name="enter_your_address">주소를 입력해주세요.</string>
+    <string name="phoneNum">전화번호</string>
+    <string name="name">이름</string>
+    <string name="passwordCheck">비밀번호 확인</string>
+    <string name="password">비밀번호</string>
 </resources>
