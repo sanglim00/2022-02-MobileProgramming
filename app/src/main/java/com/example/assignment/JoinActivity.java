@@ -65,7 +65,6 @@ public class JoinActivity extends AppCompatActivity {
                     String userPhone = joinPhone.getText().toString();
                     String userAddress = joinAddress.getText().toString();
 
-
                     editor.putString("userID", userID);
                     editor.putString("userPW", userPW);
                     editor.putString("reUserPW", reUserPW);
@@ -73,7 +72,7 @@ public class JoinActivity extends AppCompatActivity {
                     editor.putString("userPhone", userPhone);
                     editor.putString("userAddress", userAddress);
 
-                    editor.apply();
+                    editor.commit();
 
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
