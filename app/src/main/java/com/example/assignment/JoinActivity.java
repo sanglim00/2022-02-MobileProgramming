@@ -14,6 +14,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class JoinActivity extends AppCompatActivity {
     Button checkIDBtn, joinFinishBtn, backBtn;
     private EditText joinID, joinPW, rejoinPW, joinName, joinPhone, joinAddress ;
@@ -76,23 +79,46 @@ public class JoinActivity extends AppCompatActivity {
                 joinPhone = (EditText) findViewById(R.id.joinPhone);
                 joinAddress = (EditText) findViewById(R.id.joinAddress);
 
+                // 비밀번호 검사 - 숫자, 특수문자가 포함하기
+                String symbol = "([0-9].*[!,@,#,^,&,*,(,)])|([!,@,#,^,&,*,(,)].*[0-9])";
+                // 비밀번호 검사 - 영문자 대소문자 적어도 하나씩 포함하기
+                String alpha = "([a-z].*[A-Z])|([A-Z].*[a-z])";
+
+                Pattern Psymbol = Pattern.compile(symbol);
+                Pattern Palpha = Pattern.compile(alpha);
+
+                Matcher Msymbol = Psymbol.matcher(joinPW.getText().toString());
+                Matcher Malpha = Palpha.matcher(joinPW.getText().toString());
+
                 // 비밀번호 입력 체크
-                if(joinPW.getText().toString().equals(rejoinPW.getText().toString())) checkPW = true;
+                if (Msymbol.find() && Malpha.find() && joinPW.getText().toString().equals(rejoinPW.getText().toString())) checkPW = true;
+                // 비밀번호 검사에 통과하지 못했을 때
+                else if (!Msymbol.find() || !Malpha.find()) {
+                    Toast.makeText(getApplicationContext(), "비밀번호에 숫자, 특수문자, 대소문자가 포함되어야합니다", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                // 비밀번호와 비밀번호 확인이 다를때
                 else {
                     Toast.makeText(getApplicationContext(), "두 비밀번호가 다릅니다", Toast.LENGTH_SHORT).show();
                     checkPW = false;
                     return ;
                 }
 
+                // 개인정보처리방침 동의 체크
                 ppRadio = findViewById( R.id.ppRadio );
                 RadioButton checkedRadio = findViewById( ppRadio.getCheckedRadioButtonId());
 
+                // 아무것도 선택 안했을 때
                 if(checkedRadio == null) {
                     Toast.makeText(getApplicationContext(), "개인정보 이용약관에 동의하셔야 회원가입이 가능합니다", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                // 동의하면 true 아니면 false
                 else if( checkedRadio.getText().toString().equals("동의합니다")) checkAgree = true;
-                else checkAgree = false;
+                else {
+                    checkAgree = false;
+                    return;
+                }
 
                 // 회원가입
                 if(checkPW && checkID && checkAgree) {
