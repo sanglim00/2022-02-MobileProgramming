@@ -16,9 +16,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="463dp"
-        android:text="상품바로 보러가기" />
+        android:text="비회원으로 상품바로 보러가기" />
 
     <TableLayout
+        android:id="@+id/NonMemberTable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -26,48 +27,90 @@
         android:layout_marginTop="275dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/userID"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/enter_your_id"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="#757575" />
+            android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/userPW"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/enter_your_password"
-            android:inputType="textPassword"
-            android:minHeight="48dp"
-            android:textColorHint="#757575" />
+            <EditText
+                android:id="@+id/userID"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/enter_your_id"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
 
-        <Button
-            android:id="@+id/loginBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="1dp"
-            android:backgroundTint="@color/ad5cff"
-            android:text="@string/login"
-            android:textColor="#ffffff" />
+        </TableRow>
 
-        <Button
-            android:id="@+id/joinBtn"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:backgroundTint="#ffffff"
-            android:text="@string/join"
-            android:textColor="@color/black"
-            app:strokeColor="@color/ad5cff"
-            app:strokeWidth="2dp" />
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/userPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/enter_your_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:backgroundTint="@color/ad5cff"
+                android:text="@string/login"
+                android:textColor="#ffffff" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/joinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:backgroundTint="#ffffff"
+                android:text="@string/join"
+                android:textColor="@color/black"
+                app:strokeColor="@color/ad5cff"
+                app:strokeWidth="2dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/MemberTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="137dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
     </TableLayout>
 
 

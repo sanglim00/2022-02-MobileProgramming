@@ -250,15 +250,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="50dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="right">
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/backPtoM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/black"
+                    app:strokeColor="@color/ad5cff"
+                    app:strokeWidth="2dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/back" />
 
                 <Button
                     android:id="@+id/myInfoBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="DialogClick"
-                    android:text="내 정보보기" />
+                    android:text="@string/show_my_info" />
             </TableRow>
 
         </TableLayout>
