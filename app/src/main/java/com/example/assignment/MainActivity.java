@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     Button ProductBtn, loginBtn, JoinBtn;
     EditText userID, userPW;
 
+    Boolean LoginCheck = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +47,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // 입력값과 저장된 값이 같을경우
                 if(userID.getText().toString().equals(id) && userPW.getText().toString().equals(pw)) {
+                    LoginCheck = true;
                     Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
+                    // 상품페이지에서 내 정보 확인 시 체크하기 위한 변수전달
+                    intent.putExtra("LoginCheck", LoginCheck.booleanValue());
                     startActivity(intent);
                 }
                 // 입력값과 다를 경우
                 else {
+                    LoginCheck = false;
                     Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 다시 확인해주세요", Toast.LENGTH_SHORT).show();
                 }
 
