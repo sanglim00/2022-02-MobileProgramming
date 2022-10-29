@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +19,7 @@ public class JoinActivity extends AppCompatActivity {
     private EditText joinID, joinPW, rejoinPW, joinName, joinPhone, joinAddress ;
     private RadioGroup ppRadio;
 
-    boolean checkID = false, checkPW = false;
+    boolean checkID = false, checkPW = false, checkAgree = false;
 
 
     @Override
@@ -48,21 +49,18 @@ public class JoinActivity extends AppCompatActivity {
                 // 입력값이 비어있을 경우
                 if(joinID.getText().toString().isEmpty()) {
                     idCheckMsg.setText("아이디를 입력해주세요");
-                    idCheckMsg.setVisibility(View.VISIBLE);
                     checkID = false;
                 }
                 // 이미 존재하는 아이디일 경우
                 else if(joinID.getText().toString().equals(id)) {
                     idCheckMsg.setText("이미 존재하는 아이디입니다. 다른 아이디를 설정해주세요");
-                    idCheckMsg.setVisibility(View.VISIBLE);
                     checkID = false;
                 }
                 else {
                     idCheckMsg.setText("사용 가능한 아이디입니다.");
-                    idCheckMsg.setVisibility(View.VISIBLE);
                     checkID = true;
                 }
-
+                idCheckMsg.setVisibility(View.VISIBLE);
             }
         });
 
@@ -86,8 +84,18 @@ public class JoinActivity extends AppCompatActivity {
                     return ;
                 }
 
+                ppRadio = findViewById( R.id.ppRadio );
+                RadioButton checkedRadio = findViewById( ppRadio.getCheckedRadioButtonId());
+
+                if(checkedRadio == null) {
+                    Toast.makeText(getApplicationContext(), "개인정보 이용약관에 동의하셔야 회원가입이 가능합니다", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if( checkedRadio.getText().toString().equals("동의합니다")) checkAgree = true;
+                else checkAgree = false;
+
                 // 회원가입
-                if(checkPW && checkID) {
+                if(checkPW && checkID && checkAgree) {
                     SharedPreferences prefs = getSharedPreferences("user_info", 0);
                     SharedPreferences.Editor editor = prefs.edit();
 
@@ -109,10 +117,6 @@ public class JoinActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
-                }
-                // 아이디 중복 확인을 하지 않았을 때
-                else if (!checkID) {
-                    Toast.makeText(getApplicationContext(), "아이디를 확인하세요", Toast.LENGTH_SHORT).show();
                 }
                 // 입력이 제대로 되어있지 않았을 때
                 else {
