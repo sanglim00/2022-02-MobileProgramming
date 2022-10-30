@@ -9,6 +9,7 @@
 - 안드로이드 스튜디오 
 - 개발언어 : JAVA
 - SDK 버전 : 안드로이드 12   
+  <img width="327" alt="image" src="https://user-images.githubusercontent.com/54923245/198889938-7a2eca21-8f53-423b-8295-da7091d3b496.png"> 
 
 ### 화면설명
 > #### 첫 번째 화면 (Activity_main.xml , MainActivity)
