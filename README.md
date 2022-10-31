@@ -13,12 +13,14 @@
 
 ### 화면설명
 > #### 첫 번째 화면 (Activity_main.xml , MainActivity)
+- RelativeLayout 사용
 - 로그인이 가능한 화면
 - 회원가입 버튼 클릭 시 두 번째 화면으로 이동
 - 상품 바로 보러가기 버튼 클릭 시 로그인 유무 관계없이 접근 가능
 - 아이디 비밀번호 입력 칸 상단에 비회원상태/회원상태 확인 가능
 
 > #### 두 번째 화면 (Activity_join.xml , JoinActivity)
+- RelativeLayout 사용
 - 회원가입 진행 화면
 - 아이디 중복 체크 기능, 글자수 제한: 15 (최소 3글자 입력 조건있음)
 - 비밀번호 조건 (특수키, 숫자, 영어대소문자 포함)
@@ -34,6 +36,7 @@
 - 개인정보 처리방침에 동의 시에만 회원가입 가능
 
 > #### 세 번째 화면 (Activity_product.xml , ProductActivity)
+- GridLayout 및 TableLayout 등 사용
 - 상품 화면
 - 회원/비회원 상관없이 접근가능
 - 상품목록 하단의 내 정보 보기 버튼 클릭 시
