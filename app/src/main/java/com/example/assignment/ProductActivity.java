@@ -34,10 +34,13 @@ public class ProductActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         Intent inIntent = getIntent();
+
+        // 내 정보 보기 클릭 시 회원이면 정보를 보여주고 비회원이면 로그인이나 회원가입으로 유도하기 위해 전달받은 변수
         Boolean loginCheck = inIntent.getBooleanExtra("LoginCheck", false);
+        // 유저마다의 고유 숫자이다. 로그인 후 내 정보를 확인할때 알맞은 정보를 가져오기 위해 사용한다.
         int userNumber = inIntent.getIntExtra("UserNumber", 0);
 
-        // 로그인 상태라면
+        // 로그인 상태라면 (회원일 경우 고유 숫자로 내 정보를 가져와 보여준다)
         if (loginCheck) {
             SharedPreferences sharedPreferences= getSharedPreferences("user_info", 0);
             String id = sharedPreferences.getString("userID"+userNumber,"");
@@ -54,7 +57,7 @@ public class ProductActivity extends AppCompatActivity {
                 }
             });
         }
-        // 비회원 접속 상태라면
+        // 비회원 접속 상태라면 로그인 또는 회원가입으로 유도한다.
         else {
             builder.setTitle("내 정보").setMessage("비회원으로 접속중입니다. \n로그인 또는 회원가입을 진행해주세요.");
             builder.setPositiveButton("회원가입하기", new DialogInterface.OnClickListener() {

@@ -41,7 +41,7 @@ public class JoinActivity extends AppCompatActivity {
             }
         });
 
-        // 만약 아이디 확인을 한 후 값이 다시 바뀌었다면
+        // 만약 아이디 확인을 한 후 값이 다시 바뀌었다면 아이디 확인을 다시 하도록 한다 checkID가 true일 때만 확인된 것이므로
         joinID = (EditText) findViewById(R.id.joinID);
         joinID.addTextChangedListener(new TextWatcher() {
             @Override
@@ -67,7 +67,7 @@ public class JoinActivity extends AppCompatActivity {
         int savedCount = sharedPreferences.getInt("count", 0);
         TextView idCheckMsg = (TextView) findViewById(R.id.idCheckMsg);
 
-        // 저장된 아이디와 겹치는 경우 existID를 true로 바꾸고 반복문 정지
+        // 저장된 아이디와 겹치는 경우 existID를 true로 바꾸고 반복문 정지 -> 이미 존재하는 아이디이므로 다른 것으로 바꾸도록한다
         for (int i =1; i <= savedCount; i++) {
             String data =  sharedPreferences.getString("userID"+i, "");
             if (joinID.getText().toString().equals(data)) {
@@ -89,6 +89,7 @@ public class JoinActivity extends AppCompatActivity {
         else if (existID == true) {
             idCheckMsg.setText("이미 존재하는 아이디입니다. 다른 아이디를 설정해주세요");
             checkID = false;
+        // 사용가능한 아이디이므로 사용을 허가한다
         } else {
             idCheckMsg.setText("사용 가능한 아이디입니다.");
             checkID = true;
@@ -145,7 +146,7 @@ public class JoinActivity extends AppCompatActivity {
         // 비밀번호 입력 체크
         if (Msymbol.find() && Malpha.find() && joinPW.getText().toString().equals(rejoinPW.getText().toString()))
             checkPW = true;
-            // 비밀번호 검사에 통과하지 못했을 때
+        // 비밀번호 검사에 통과하지 못했을 때
         else if (!Msymbol.find() || !Malpha.find()) {
             Toast.makeText(getApplicationContext(), "비밀번호에 숫자, 특수문자, 대소문자가 포함되어야합니다", Toast.LENGTH_SHORT).show();
             return;
@@ -178,6 +179,8 @@ public class JoinActivity extends AppCompatActivity {
 
         SharedPreferences prefs = getSharedPreferences("user_info", 0);
         SharedPreferences.Editor editor = prefs.edit();
+
+        // 유저마다 고유 숫자가 있으므로 값을 가져와 하나씩 증가하여 숫자를 부여한다.
         int cnt = prefs.getInt("count", 0);
         if (cnt >= 0) cnt += 1;
 
@@ -188,6 +191,7 @@ public class JoinActivity extends AppCompatActivity {
         String userAddress = joinAddress.getText().toString();
         String ppAgree = checkedRadio.getText().toString();
 
+        // 유저의 고유 숫자를 포함한 키값에 값들을 저장한다
         editor.putInt("count", cnt);
         editor.putString("userID" + cnt, userID);
         editor.putString("userPW" + cnt, userPW);

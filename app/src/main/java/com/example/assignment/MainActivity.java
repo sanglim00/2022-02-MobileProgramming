@@ -16,14 +16,14 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button ProductBtn, loginBtn, JoinBtn;
-    EditText userID, userPW;
+    EditText userID, userPW; // 입력한 아이디와 비밀번호
 
     TextView UserState ;
 
-    Boolean LoginCheck = false;
-    Boolean checkUser = false;
+    Boolean LoginCheck = false; // 로그인 유무로 회원/비회원 상태를 알려주기 위한 변수
+    Boolean checkUser = false; // 회원인지 아닌지 확인하는 변수 -> 회원일 경우에만 로그인 가능
 
-    int userNumber ;
+    int userNumber ;  // 상품페이지에서 내 정보보기 버튼 클릭 시 내 정보를 가져오기 위한 유저만의 고유숫자를 담는 변수
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
+
+                // 로그인 유무를 알 수 있는 변수와 유저의 고유 숫자를 함께 넘겨준다
                 intent.putExtra("LoginCheck", LoginCheck.booleanValue());
                 intent.putExtra("UserNumber", userNumber);
                 startActivity(intent);
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 userPW = (EditText) findViewById(R.id.userPW);
 
                 SharedPreferences sharedPreferences= getSharedPreferences("user_info", 0);
+                // 유저정보를 확인하기 위한 변수를 저장한 프레퍼런스에서 가져온다
                 int savedCount = sharedPreferences.getInt("count", 0);
 
                 // 저장된 아이디와 비밀번호가 모두 일치하는 지 확인
@@ -64,11 +67,11 @@ public class MainActivity extends AppCompatActivity {
                     // 반복문 중 하나의 계정이라도 일치하면 checkUser를 true로 바꾸고 반복문 정지
                     if (userID.getText().toString().equals(id) && userPW.getText().toString().equals(pw) ){
                         checkUser = true;
-                        userNumber = i;
+                        userNumber = i; // 유저의 고유숫자를 따로 저장
                         break;
                     }
                 }
-
+                // 아이디나 비밀번호를 입력하지 않았을 경우
                 if(userID.getText().toString().isEmpty() || userPW.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 제대로 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
