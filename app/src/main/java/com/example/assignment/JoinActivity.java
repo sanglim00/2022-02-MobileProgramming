@@ -120,7 +120,13 @@ public class JoinActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "입력되지 않은 항목이 있습니다.", Toast.LENGTH_SHORT).show();
             return;
         }
+        // 아이디는 2글자 이상 입력해야만 함 (3글자부터 가능)
+        if (joinID.getText().toString().length() < 4) {
+            Toast.makeText(getApplicationContext(), "아이디는 2글자 이상 입력해주세요 (3글자부터 가능)", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
+        // 기존 유저와의 아이디 중복을 확인하기 위함
         if (!checkID) {
             Toast.makeText(getApplicationContext(), "아이디를 확인해주세요.", Toast.LENGTH_SHORT).show();
             return;
