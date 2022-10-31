@@ -106,6 +106,11 @@ public class JoinActivity extends AppCompatActivity {
                 Matcher Msymbol = Psymbol.matcher(joinPW.getText().toString());
                 Matcher Malpha = Palpha.matcher(joinPW.getText().toString());
 
+                if (joinPW.getText().toString().length() < 5) {
+                    Toast.makeText(getApplicationContext(), "비밀번호는 5글자 이상 입력해주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 // 비밀번호 입력 체크
                 if (Msymbol.find() && Malpha.find() && joinPW.getText().toString().equals(rejoinPW.getText().toString())) checkPW = true;
                 // 비밀번호 검사에 통과하지 못했을 때
