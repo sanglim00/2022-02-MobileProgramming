@@ -59,6 +59,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/white"
                     android:minWidth="90dp"
+                    android:onClick="checkUserId"
                     android:text="@string/checkID"
                     android:textColor="@color/black"
                     app:strokeColor="@color/ad5cff"
@@ -193,6 +194,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/ad5cff"
+                android:onClick="joinButtonClicked"
                 android:text="@string/joinBtn"
                 android:textColor="@color/white" />
 
