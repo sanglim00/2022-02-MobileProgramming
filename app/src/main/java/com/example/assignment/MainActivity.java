@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Boolean LoginCheck = false;
     Boolean checkUser = false;
 
+    int userNumber ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
                 intent.putExtra("LoginCheck", LoginCheck.booleanValue());
+                intent.putExtra("UserNumber", userNumber);
                 startActivity(intent);
             }
         });
@@ -61,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     // 반복문 중 하나의 계정이라도 일치하면 checkUser를 true로 바꾸고 반복문 정지
                     if (userID.getText().toString().equals(id) && userPW.getText().toString().equals(pw) ){
                         checkUser = true;
+                        userNumber = i;
                         break;
                     }
                 }
@@ -69,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 제대로 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Toast.makeText(getApplicationContext(), checkUser.toString(), Toast.LENGTH_SHORT).show();
 
                 // 입력값과 저장된 값이 같을경우
                 if(checkUser == true) {
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
                     // 상품페이지에서 내 정보 확인 시 체크하기 위한 변수전달
                     intent.putExtra("LoginCheck", LoginCheck.booleanValue());
+                    intent.putExtra("UserNumber", userNumber);
                     startActivity(intent);
                 }
                 // 입력값과 다를 경우

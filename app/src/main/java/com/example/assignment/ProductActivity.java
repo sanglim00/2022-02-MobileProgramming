@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class ProductActivity extends AppCompatActivity {
 
@@ -34,15 +35,16 @@ public class ProductActivity extends AppCompatActivity {
 
         Intent inIntent = getIntent();
         Boolean loginCheck = inIntent.getBooleanExtra("LoginCheck", false);
+        int userNumber = inIntent.getIntExtra("UserNumber", 0);
 
         // 로그인 상태라면
         if (loginCheck) {
             SharedPreferences sharedPreferences= getSharedPreferences("user_info", 0);
-            String id = sharedPreferences.getString("userID","");
-            String name = sharedPreferences.getString("userName", "");
-            String phone = sharedPreferences.getString("userPhone", "");
-            String address = sharedPreferences.getString("userAddress", "");
-            String agree = sharedPreferences.getString("ppAgree", "");
+            String id = sharedPreferences.getString("userID"+userNumber,"");
+            String name = sharedPreferences.getString("userName"+userNumber, "");
+            String phone = sharedPreferences.getString("userPhone"+userNumber, "");
+            String address = sharedPreferences.getString("userAddress"+userNumber, "");
+            String agree = sharedPreferences.getString("ppAgree"+userNumber, "");
 
             builder.setTitle("내 정보").setMessage("아이디: " + id + "\n이름: " + name +"\n전화번호: " + phone + "\n주소: " + address + "\n개인정보처리방침: "+agree);
             builder.setNegativeButton("닫기", new DialogInterface.OnClickListener() {
@@ -70,8 +72,6 @@ public class ProductActivity extends AppCompatActivity {
                 }
             });
         }
-
-
 
 
         AlertDialog alertDialog = builder.create();
