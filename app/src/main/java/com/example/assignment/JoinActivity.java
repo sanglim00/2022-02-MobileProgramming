@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,8 +40,19 @@ public class JoinActivity extends AppCompatActivity {
             }
         });
 
-        // 아이디 중복확인
-        checkIDBtn = (Button) findViewById(R.id.checkIDBtn);
+        // 만약 아이디 확인을 한 후 값이 다시 바뀌었다면
+        joinID = (EditText) findViewById(R.id.joinID);
+        joinID.addTextChangedListener(new TextWatcher() {
+              @Override
+              public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+              @Override
+              public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) { checkID = false; }
+              @Override
+              public void afterTextChanged(Editable editable) {}
+          });
+
+                // 아이디 중복확인
+                checkIDBtn = (Button) findViewById(R.id.checkIDBtn);
         checkIDBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
