@@ -11,6 +11,10 @@
 - SDK 버전 : 안드로이드 12   
   <img width="327" alt="image" src="https://user-images.githubusercontent.com/54923245/198889938-7a2eca21-8f53-423b-8295-da7091d3b496.png"> 
 
+### 설치방법
+- 우측 상단의 Code 버튼 클릭 후 Download ZIP 버튼을 클릭 하여 압축파일을 다운받는다.
+- 안드로이드 스튜디오에서 해당 파일을 압축해제하여 run 시키면 프로젝트가 실행된다.
+
 ### 화면설명
 > #### 첫 번째 화면 (Activity_main.xml , MainActivity)
 - RelativeLayout 사용
