@@ -74,6 +74,11 @@
   <img width="256" alt="image" src="https://user-images.githubusercontent.com/54923245/199163936-88d63251-a0b0-4cc7-8a16-b1641a979d9e.png">
   <img width="253" alt="image" src="https://user-images.githubusercontent.com/54923245/199164012-c5908355-da50-4175-811b-d79f821e3912.png">
   </div>
+  <p> - 완벽하지 않은 입력들</p>
+  <div>
+    <img width="270" alt="image" src="https://user-images.githubusercontent.com/54923245/199165052-a7f20bbe-1514-46c5-b3ed-77638746b6b2.png">
+
+  </div>
 </div>
 
 
