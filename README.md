@@ -65,9 +65,14 @@
 <div>
   <p> - 아이디 확인</p>
   <div>
+  <div>
   <img width="265" alt="image" src="https://user-images.githubusercontent.com/54923245/199163601-96195e0a-ec95-4998-82e8-a6588e745588.png">
   <img width="267" alt="image" src="https://user-images.githubusercontent.com/54923245/199163660-12c86843-efef-495c-ad8d-f202704ad5a1.png">
+  </div>
+  <div>
   <img width="266" alt="image" src="https://user-images.githubusercontent.com/54923245/199163687-13f6ecf3-1e4d-4267-b7f4-573943d3d16b.png">
+  <img width="278" alt="image" src="https://user-images.githubusercontent.com/54923245/199185482-00a55e53-6eb7-4258-b06a-867c41664c59.png">
+  </div>
   </div>
   <p> - 비밀번호 조건</p>
   <div>
