@@ -85,6 +85,11 @@ public class JoinActivity extends AppCompatActivity {
             idCheckMsg.setText("아이디를 입력해주세요");
             checkID = false;
         }
+        // 아이디는 4글자 이상 입력해야만 함
+        else if (joinID.getText().toString().length() < 4) {
+            idCheckMsg.setText("아이디는 4글자 이상 입력해주세요");
+            checkID = false;
+        }
         // 이미 존재하는 아이디일 경우
         else if (existID == true) {
             idCheckMsg.setText("이미 존재하는 아이디입니다. 다른 아이디를 설정해주세요");
@@ -118,11 +123,6 @@ public class JoinActivity extends AppCompatActivity {
                 joinAddress.getText().toString().isEmpty()
         ) {
             Toast.makeText(getApplicationContext(), "입력되지 않은 항목이 있습니다.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        // 아이디는 4글자 이상 입력해야만 함
-        if (joinID.getText().toString().length() < 4) {
-            Toast.makeText(getApplicationContext(), "아이디는 4글자 이상 입력해주세요", Toast.LENGTH_SHORT).show();
             return;
         }
 
