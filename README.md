@@ -62,6 +62,36 @@
     화면 실행(첫 번째 화면) -> 아이디 및 비밀번호 입력 후 로그인 버튼 클릭(첫 번째 화면) -> 상품 확인 페이지 접근(세 번째 화면) 
     -> 상품들 하단에 내 정보보기 버튼 클릭 시 회원가입 시 입력한 간단 정보 확인 가능 (아이디, 이름, 전화번호, 주소, 개인정보처리방침 동의 유무)
 
+### 데이터 저장 방식 - Preferences 사용
+> count(유저의 고유 넘버), userID, userPW, userName, userPhone, userAddress, ppAgree 를 저장한다
+
+```
+SharedPreferences prefs = getSharedPreferences("user_info", 0);
+SharedPreferences.Editor editor = prefs.edit();
+
+// 유저마다 고유 숫자가 있으므로 값을 가져와 하나씩 증가하여 숫자를 부여한다.
+int cnt = prefs.getInt("count", 0);
+if (cnt >= 0) cnt += 1;
+
+String userID = joinID.getText().toString();
+String userPW = joinPW.getText().toString();
+String userName = joinName.getText().toString();
+String userPhone = joinPhone.getText().toString();
+String userAddress = joinAddress.getText().toString();
+String ppAgree = checkedRadio.getText().toString();
+
+// 유저의 고유 숫자를 포함한 키값에 값들을 저장한다
+editor.putInt("count", cnt);
+editor.putString("userID" + cnt, userID);
+editor.putString("userPW" + cnt, userPW);
+editor.putString("userName" + cnt, userName);
+editor.putString("userPhone" + cnt, userPhone);
+editor.putString("userAddress" + cnt, userAddress);
+editor.putString("ppAgree" + cnt, ppAgree);
+
+editor.commit();
+```
+
   
 ### 실행 화면 예시 (기능 위주)
 
